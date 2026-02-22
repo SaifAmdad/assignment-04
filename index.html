@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Job-Tracker</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Job Application Tracker</h1>
+        <div class="card-container">
+          <div class="card">
+            <p>Total</p>
+            <h2 class="total" style="color: #002c5c">8</h2>
+          </div>
+          <div class="card">
+            <p>Interview</p>
+            <h2 id="interview-count" style="color: #10b981">0</h2>
+          </div>
+          <div class="card">
+            <p>Rejected</p>
+            <h2 id="rejected-count" style="color: #ef4444">0</h2>
+          </div>
+        </div>
+        <hr class="hr" />
+      </div>
+    </header>
+
+    <main style="margin-bottom: 60px">
+      <div class="container">
+        <div class="head-line">
+          <h3>Available Jobs</h3>
+          <p><span class="total">8</span>Jobs</p>
+        </div>
+
+        <div class="manu-container">
+          <div id="all" class="manu active"><p>All</p></div>
+          <div id="interview" class="manu"><p>Interview</p></div>
+          <div id="rejected" class="manu"><p>Rejected</p></div>
+        </div>
+      </div>
+
+      <!-- All jobs -->
+      <div id="job-container" class="container">
+        <!-- <div class="job-card">
+          <div class="first-div">
+            <div>
+              <h2 class="job-title">Mobile First Corp</h2>
+              <h3 class="job-tech">React Native Developer</h3>
+            </div>
+
+            <button class="delete">
+              <img src="delete.svg" alt="Delete" srcset="" />
+            </button>
+          </div>
+          <div class="job-type">
+            <p>Remote : Full-time : $130,000 - $175,000</p>
+          </div>
+          <button class="btn job-status">NOT APPLIED</button>
+          <div class="job-describtion">
+            Build cross-platform mobile applications using React Native. Work on
+            products used by millions of users worldwide.
+          </div>
+
+          <button class="btn interview">INTERVIEW</button
+          ><button class="btn rejected">REJECTED</button>
+        </div>
+        <div class="job-card">
+          <div class="first-div">
+            <div>
+              <h2 class="job-title">Mobile First Corp</h2>
+              <h3 class="job-tech">React Native Developer</h3>
+            </div>
+
+            <button class="delete">
+              <img src="delete.svg" alt="Delete" srcset="" />
+            </button>
+          </div>
+          <div class="job-type">
+            <p>Remote : Full-time : $130,000 - $175,000</p>
+          </div>
+          <button class="btn job-status">NOT APPLIED</button>
+          <div class="job-describtion">
+            Build cross-platform mobile applications using React Native. Work on
+            products used by millions of users worldwide.
+          </div>
+
+          <button class="btn interview">INTERVIEW</button
+          ><button class="btn rejected">REJECTED</button>
+        </div>
+        <div class="job-card">
+          <div class="first-div">
+            <div>
+              <h2 class="job-title">Mobile First Corp</h2>
+              <h3 class="job-tech">React Native Developer</h3>
+            </div>
+
+            <button class="delete">
+              <img src="delete.svg" alt="Delete" srcset="" />
+            </button>
+          </div>
+          <div class="job-type">
+            <p>Remote : Full-time : $130,000 - $175,000</p>
+          </div>
+          <button class="btn job-status">NOT APPLIED</button>
+          <div class="job-describtion">
+            Build cross-platform mobile applications using React Native. Work on
+            products used by millions of users worldwide.
+          </div>
+
+          <button class="btn interview">INTERVIEW</button
+          ><button class="btn rejected">REJECTED</button>
+        </div> -->
+      </div>
+      <!-- Interview jobs -->
+      <div id="interview-container" class="container hide">
+        <div class="empty">
+          <img src="jobs.png" alt="" srcset="" />
+          <h2>No jobs available</h2>
+          <p>Check back soon for new job opportunities</p>
+        </div>
+      </div>
+      <!-- Rejected jobs -->
+      <div id="rejected-container" class="container hide">
+        <div class="empty">
+          <img src="jobs.png" alt="" srcset="" />
+          <h2>No jobs available</h2>
+          <p>Check back soon for new job opportunities</p>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+body {
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  background-color: #f8fafc;
+}
+
+/* ------------------------------------ */
+.hide {
+  display: none;
+}
+
+header {
+  margin-top: 60px;
+}
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 20px;
+}
+.card {
+  background-color: #f1f2f4;
+  padding: 20px;
+  width: 100%;
+}
+.card > p {
+  font-size: 14px;
+  color: #323b49;
+  margin-bottom: 10px;
+}
+.card > h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.hr {
+  border: #e6e7e9 1px solid;
+  width: 100%;
+  margin: 30px 0;
+}
+
+/* ------------------------- */
+.head-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.head-line > h3 {
+  color: #002c5c;
+  font-size: 20px;
+  font-weight: 700;
+}
+.head-line > p {
+  font-size: 16px;
+  color: #64748b;
+}
+
+/* manu ----------------------------- */
+.manu-container {
+  display: flex;
+  margin-bottom: 16px;
+}
+.manu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: #64748b;
+  width: 80px;
+  height: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 4px;
+}
+.manu > p {
+  font-size: 12px;
+  font-weight: 700;
+}
+.active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* Jobs ---------------------------- */
+.job-card {
+  padding: 24px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  margin-bottom: 16px;
+}
+.first-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #002c5c;
+  line-height: 26px;
+}
+.job-tech {
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.job-type {
+  color: #64748b;
+  font-weight: 400;
+  margin: 20px 0;
+}
+.btn {
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.job-status {
+  color: #002c5c;
+  background-color: #eef4ff;
+  border: none;
+}
+
+.job-describtion {
+  margin: 8px 0 20px 0;
+  color: #323b49;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.interview {
+  color: #10b981;
+  font-weight: 700;
+  border: #10b981 1px solid;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.rejected {
+  color: #ef4444;
+  border: #ef4444 1px solid;
+  font-weight: 700;
+  cursor: pointer;
+}
+.delete {
+  height: 32px;
+  width: 32px;
+  padding: 8px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.interview-selected {
+  border-left: 5px solid #10b981;
+}
+.interview-rejected {
+  border-left: 5px solid #ef4444;
+}
+
+/* empty ---------------------- */
+.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 110px 0;
+  flex-direction: column;
+}
+.empty > img {
+  height: 100px;
+  margin-bottom: 20px;
+}
+.empty > h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #002c5c;
+  margin-bottom: 10px;
+}
+.empty > p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #64748b;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+  .card {
+    width: 90%;
+  }
+}
