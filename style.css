@@ -170,6 +170,16 @@ header {
   border-left: 5px solid #ef4444;
 }
 
+.interview-status {
+  background-color: #10b981;
+  color: white;
+}
+
+.rejected-status {
+  background-color: #b91010;
+  color: white;
+}
+
 /* empty ---------------------- */
 .empty {
   display: flex;

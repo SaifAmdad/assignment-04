@@ -173,7 +173,7 @@ rejected.addEventListener("click", () => {
   all.classList.remove("active");
   rejected.classList.add("active");
 
-  selectedJob.innerText = `${interviewList.length} of `;
+  selectedJob.innerText = `${rejectedList.length} of `;
 });
 
 // Job counter--------------
@@ -196,7 +196,9 @@ function clickHandler(e) {
     card.classList.remove("interview-rejected");
     card.classList.add("interview-selected");
     let status = card.querySelector(".job-status");
-    status.innerText = "Interview";
+    status.innerText = "INTERVIEW";
+    status.classList.remove("rejected-status");
+    status.classList.add("interview-status");
 
     getInterview();
     getRejected();
@@ -207,7 +209,10 @@ function clickHandler(e) {
     card.classList.remove("interview-selected");
     card.classList.add("interview-rejected");
     let status = card.querySelector(".job-status");
-    status.innerText = "Rejected";
+    status.innerText = "REJECTED";
+
+    status.classList.remove("interview-status");
+    status.classList.add("rejected-status");
 
     getInterview();
     getRejected();
@@ -335,7 +340,7 @@ function getInterview() {
           <div class="job-type">
             <p>${interview.location}</p>
           </div>
-          <button class="btn job-status" style="background-color: #10b981; color: white;">INTERVIEW</button>
+          <button class="btn job-status interview-status" >INTERVIEW</button>
           <div class="job-describtion">
             ${interview.description}
           </div>
@@ -383,7 +388,7 @@ function getRejected() {
           <div class="job-type">
             <p>${interview.location}</p>
           </div>
-          <button class="btn job-status" style="background-color: #b91010; color: white;">REJECTED</button>
+          <button class="btn job-status rejected-status" >REJECTED</button>
           <div class="job-describtion">
             ${interview.description}
           </div>
