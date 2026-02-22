@@ -1,6 +1,7 @@
 let totalJobsCount = document.getElementsByClassName("total");
 let interviewCount = document.getElementById("interview-count");
 let rejectedCount = document.getElementById("rejected-count");
+let selectedJob = document.getElementById("selectedJob");
 
 // -----------------------------
 
@@ -149,6 +150,8 @@ all.addEventListener("click", () => {
   interview.classList.remove("active");
   rejected.classList.remove("active");
   all.classList.add("active");
+
+  selectedJob.innerText = "";
 });
 interview.addEventListener("click", () => {
   allJobs.classList.add("hide");
@@ -158,6 +161,8 @@ interview.addEventListener("click", () => {
   all.classList.remove("active");
   rejected.classList.remove("active");
   interview.classList.add("active");
+
+  selectedJob.innerText = `${interviewList.length} of `;
 });
 rejected.addEventListener("click", () => {
   allJobs.classList.add("hide");
@@ -167,6 +172,8 @@ rejected.addEventListener("click", () => {
   interview.classList.remove("active");
   all.classList.remove("active");
   rejected.classList.add("active");
+
+  selectedJob.innerText = `${interviewList.length} of `;
 });
 
 // Job counter--------------
@@ -208,6 +215,26 @@ function clickHandler(e) {
   }
 
   if (e.target.classList.contains("deleted")) {
+    // delete from list--------------
+    for (let i of rejectedList) {
+      if (i.id == card.id) {
+        const index = rejectedList.findIndex((i) => i.id == card.id);
+        console.log("index", index);
+        if (index !== -1) {
+          rejectedList.splice(index, 1);
+        }
+      }
+    }
+
+    for (let i of interviewList) {
+      if (i.id == card.id) {
+        const index = interviewList.findIndex((i) => i.id == card.id);
+        if (index !== -1) {
+          interviewList.splice(index, 1);
+        }
+      }
+    }
+    // ------------
     card.remove();
     getInterview();
     getRejected();
@@ -322,6 +349,7 @@ function getInterview() {
   });
 
   interviewCount.innerText = interviewList.length;
+
   if (interviewList.length < 1) {
     interviewContainer.innerHTML = `
     <div class="empty">
