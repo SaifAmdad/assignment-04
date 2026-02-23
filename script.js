@@ -117,7 +117,7 @@ jobs.forEach((job) => {
               <h3 class="job-tech">${job.position}</h3>
             </div>
 
-            <button class="delete">
+            <button class="delete deleted">
               <img src="delete.svg" alt="Delete" srcset="" class="deleted"/>
             </button>
           </div>
@@ -186,7 +186,7 @@ function getJobsCount(a) {
 // click handler ------------------------
 let count = 0;
 function clickHandler(e) {
-  const btn = e.target.closest(".interview, .rejected, .delete");
+  const btn = e.target.closest(".interview, .rejected, .deleted");
   if (!btn) return;
 
   const card = e.target.closest(".job-card");
@@ -333,7 +333,7 @@ function getInterview() {
               <h3 class="job-tech">${interview.position}</h3>
             </div>
 
-            <button class="delete">
+            <button class="delete deleted">
               <img src="delete.svg" alt="Delete" srcset="" class="deleted"/>
             </button>
           </div>
@@ -381,7 +381,7 @@ function getRejected() {
               <h3 class="job-tech">${interview.position}</h3>
             </div>
 
-            <button class="delete">
+            <button class="delete deleted">
               <img src="delete.svg" alt="Delete" srcset="" class="deleted"/>
             </button>
           </div>
